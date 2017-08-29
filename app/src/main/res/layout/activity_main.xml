@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.olegsagenadatrytwo.firebaseauthandnotification.view.mainactivity.MainActivity">
+
+    <TextView
+        android:id="@+id/signintext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:text="Sign in"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold|italic"/>
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signintext"
+        android:background="@android:drawable/edit_text"
+        android:hint="UserName"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etUserName"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:padding="20dp"/>
+
+    <Button
+        android:id="@+id/btnLogIn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#280ad4"
+        android:text="Log in through Firebase"
+        android:textColor="#FFFFFF"
+        android:onClick="authenticateUser"
+        android:textStyle="bold"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnLogIn"
+        android:background="#c0c0c0"/>
+
+    <TextView
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:onClick="authenticateUser"
+        android:text="Create Account Firebase"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#f10c0c"/>
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/login_with_google"
+        android:layout_below="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:layout_below="@+id/login_with_google"/>
+
+
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/button_twitter_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fb_login_button"
+
+        />
+
+
+</RelativeLayout>
